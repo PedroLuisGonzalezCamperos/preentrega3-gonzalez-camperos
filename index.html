@@ -1,46 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pre entrega 3</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <table>
+        <!--Cabecera inicio-->
+      <thead>
+        <tr>
+          <th>Artículos</th>
+          <th>Cantidades Actuales</th>
+          <th>agregar</th>
+          <th>extraer</th>
+        </tr>
+      </thead>
+        <!--Cabecera inicio-->
+
+        <!--Cuerpo inicio-->
+      <tbody>
+
+        <!--fila 1 inicio-->
+
+       <tr>
+        <th>polos</th>
+        <td></td>
+        <td><input type="text" id="ip1"></td>
+        <td><input type="text"></td>
+       </tr>
+
+        <!--fila 1 final-->
+
+<!--fila 2 inicio-->
+
+<tr>
+    <th>Pantalones</th>
+    <td></td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+   </tr>
+
+    <!--fila 2 final-->
+
+<!--fila 3 inicio-->
+
+<tr>
+    <th>Chaquetas</th>
+    <td></td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+   </tr>
+
+    <!--fila 3 final-->
+
+
+<!--fila 4 inicio-->
+
+<tr>
+    <th>Sudaderas</th>
+    <td></td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+   </tr>
+
+    <!--fila 4 final-->
+
+
+    <!--fila 5 inicio-->
+
+<tr>
+    <th>Shorts</th>
+    <td></td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+   </tr>
+
+    <!--fila 5 final-->
+
+
+
+      </tbody>
+
+      <!--Cuerpo final-->
+    </table>
+
     <div class="contenedor">
+      <h1>Inventario de Productos</h1>
+      <br />
 
-        <h1>Inventario de Productos</h1><br>
+      <h2>Buenos días Señor Usuario</h2>
+      <label for="primernU">Primer nombre del Usuario</label>
+      <input type="text" name="primernU" id="primernU" /><br /><br />
 
-        <h2>Buenos días Señor Usuario</h2>
-        <label for="primernU">Primer nombre del Usuario</label>
-        <input type="text" name="primernU"  id="primernU">
+      <label for="primeraU">Primer apellido del Usuario</label>
+      <input type="text" name="primeraU" id="primeraU" /><br /><br />
 
-        <label for="primeraU">Primer apellido del Usuario</label>
-        <input type="text" name="primeraU"  id="primeraU">
+      <div class="grilla">
+        <div class="cantidad">
+          <h2>
+            Indique cual producto desea conocer su <br />
+            cantidad en la Tienda
+          </h2>
 
-        <h2>Indique cual producto desea conocer su cantidad en el inventario</h2>
+          <button onclick="cantidad('Polos')" type="button">Polos</button
+          ><br /><br />
 
-        <button onclick="cantidad('Polos')" type="button">Polos</button><br><br>
+          <button onclick="cantidad('Pantalones')" type="button">
+            Pantalones</button
+          ><br /><br />
 
-        <button onclick="cantidad('Pantalones')" type="button">Pantalones</button><br><br>
+          <button onclick="cantidad('Chaquetas')" type="button">
+            Chaquetas</button
+          ><br /><br />
 
-        <button onclick="cantidad('Chaquetas')" type="button">Chaquetas</button><br><br>
+          <button onclick="cantidad('Sudaderas')" type="button">
+            Sudaderas</button
+          ><br /><br />
 
-        <button onclick="cantidad('Sudaderas')" type="button">Sudaderas</button><br><br>
+          <button onclick="cantidad('Shorts')" type="button">Shorts</button
+          ><br /><br />
 
-        <button onclick="cantidad('Shorts')" type="button">Shorts</button><br><br>
+          <h3>cantidad de artículos que no están en inventario</h3>
+          <button onclick="articulosdemas()">Nro. de artículos</button>
+          <p id="muestrapantalla"></p>
 
-        <h3>cantidad de artículos que no están en inventario</h3>
-        <button onclick="articulosdemas()">Nro. de artículos</button>
+          <br /><br />
+        </div>
 
-        
-        
-        <p id="muestrapantalla"></p>
+        <div class="precios">
+          <h2>Precios de los productos</h2>
 
+          <button onclick="precios('Polos')" type="button">Polos</button
+          ><br /><br />
 
+          <button onclick="precios('Pantalones')" type="button">
+            Pantalones</button
+          ><br /><br />
+
+          <button onclick="precios('Chaquetas')" type="button">Chaquetas</button
+          ><br /><br />
+
+          <button onclick="precios('Sudaderas')" type="button">Sudaderas</button
+          ><br /><br />
+
+          <button onclick="precios('Shorts')" type="button">Shorts</button
+          ><br /><br />
+
+          <p id="muestrapantalla2"></p>
+          <br />
+        </div>
+      </div>
+
+      <div class="cantidades">
+        <h2>indique la cantidad que quiere adquirir de cada producto</h2>
+
+        <label for="polo">Polos</label>
+        <input type="text" name="polo" id="polo" /><br /><br />
+
+        <label for="pantalon">pantalones</label>
+        <input type="text" name="pantalon" id="pantalon" /><br /><br />
+
+        <label for="chaqueta">Chaquetas</label>
+        <input type="text" name="chaqueta" id="chaqueta" /><br /><br />
+
+        <label for="sudadera">Sudaderas</label>
+        <input type="text" name="sudadera" id="sudadera" /><br /><br />
+
+        <label for="short">Shorts</label>
+        <input type="text" name="short" id="short" /><br /><br />
+
+        <h2>El total a pagar por los productos escogidos es</h2>
+
+        <button type="button" onclick="suma()">costo total</button><br /><br />
+        <p id="textoTotal"></p>
+      </div>
     </div>
+    <br /><br />
 
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
